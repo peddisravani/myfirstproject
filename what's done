@@ -1,0 +1,24 @@
+-launch ec2 instance with ubuntu
+-add inbound rule in security group with port 8080
+-in terminal run ssh -i aws-login.pem ubuntu@publickey
+-change the permissions in linux chmod 600 aws-login.pem
+-sudo apt update
+-sudo apt install openjdk-11-jdk
+to install jenkins use= sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian/jenkins.io-2023.key
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+-in browser open http://publickey:8080
+-we can see jenkins
+-select install suggested plugins
+-create username and password
+-open manage jenkins which is present in dashboard
+-select plugins and in that select avilable plugins
+-search for docker pipeline
+-install docker pipeline plugin and restart the jenkins
+
+
+
